@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+<script defer src="main.js"></script></head>
+<body>
+    <h1>TODO List</h1>
+    <button class="newProject">New Project</button>
+    <button class="btnOpenPopup">Add Task</button>
+    <div id="projectOverlay" class="otherPopup">
+        <div class="popupBox">
+            <h2 style="color: green">New Project</h2>
+            <form class="projectContainer">
+                <label class="formLabel" for="title">Project Name:  (Max 20 char)</label>
+                <input type="text" class="formInput" name="addProject" id="addProject" placeholder="Project Title..." required maxlength="20">
+                <button class="projectSubmit" type="submit">Submit</button>
+            </form>
+            <button class="projectClose">Close</button>
+        </div>
+    </div>
+    <div id="popupOverlay" 
+        class="overlayContainer">
+        <div class="popupBox">
+            <h2 style="color: green;">Task Info</h2>
+            <form class="form-container">
+                <label class="formLabel" for="title">Task:</label>
+                <input type="text" class="formInput" name="title" id="title" value="" required maxlength="30">
+                <label class="formLabel" for="description">Description:</label>
+                <input type="text" class="formInput" name="description" id="description" value="" required maxlength="30">
+                <label class="formLabel" for="date">Date:</label>
+                <input type="date" class="formInput" name="date" id="date" value="" required>
+                <label class="formLabel" for="priority">Priority Level</label>
+                <select name="priority" class="formInput" id="priority" value="" required>
+                    <option value="High">High priority</option>
+                    <option value="Medium" selected>Average priority</option>
+                    <option value="Low" selected>Low priority</option>
+                </select>
+                <label class="formLabel" for="notes">Notes:</label>
+                <input type="text" class="formInput" name="notes" id="notes" value="" maxlength="60">
+                <button class="btnSubmit" type="submit">Submit</button>
+            </form>
+            <button class="btnClosePopup">Close</button>
+        </div>
+    </div>
+    <div class="container">
+        <div>
+            <h2 class="projectHeader">My Projects</h2>
+            <div class="project"></div>
+        </div>
+        <div class="placeHolder">
+            <h2>My Tasks</h2>
+                <div class="task"></div>
+                <div class="buttons"></div>
+        </div>
+    </div>
+</body>
+</html>
