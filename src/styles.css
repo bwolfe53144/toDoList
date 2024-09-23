@@ -1,6 +1,8 @@
 .container {
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr 5fr;
+    gap: 2rem;
 }
 
 .taskContainer {
@@ -163,4 +165,5 @@ body {
 
 h2 {
     font-size: 30px;
+    text-align: center;
 }

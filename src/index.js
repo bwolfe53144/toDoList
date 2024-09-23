@@ -57,7 +57,7 @@ function displayTodo(list) {
         let editTask = document.createElement("editTask");
         editTask.dataset.id = i;
         editTask.innerText = "Edit";
-        editTask.style.cssText = "background-color: black; color:white; text-align:center; padding:13px 15px 12px 15px; width:60px; height:20px; border-radius: 15px; position: relative; top: 80px; left: 77%";
+        editTask.style.cssText = "background-color: black; color:white; text-align:center; padding:13px 15px 12px 15px; width:60px; height:20px; border-radius: 15px; position: relative; top: 80px; left: 82%";
         editTask.addEventListener("click", function () {
             edit(myProjects, editTask.dataset.id);
         });
@@ -65,7 +65,7 @@ function displayTodo(list) {
         let removeTask = document.createElement("removeTask");
         removeTask.dataset.id = i;
         removeTask.innerText = "Remove";
-        removeTask.style.cssText = "background-color: black; color:white; text-align:center; padding:13px; width:60px; height:20px; border-radius: 15px; position: relative; top: 80px; left: 78%";
+        removeTask.style.cssText = "background-color: black; color:white; text-align:center; padding:13px; width:60px; height:20px; border-radius: 15px; position: relative; top: 80px; left: 83%";
         removeTask.addEventListener("click", function () {
             clearTask(myProjects, removeTask.dataset.id);
         });
@@ -110,7 +110,7 @@ function displayProjects(myProjects, projectId) {
         let removeProject = document.createElement("removeProject");
         removeProject.dataset.id = j;
         removeProject.innerText = "Remove";
-        removeProject.style.cssText = "background-color: black; color:white; text-align:center; font-size:.7rem; font-weight:bold; padding:15px; width:2.2rem; height:1rem; border-radius: 15px; position: relative; top: 1rem";
+        removeProject.style.cssText = "background-color: black; color:white; text-align:center; font-size:.7rem; font-weight:bold; padding:15px; width:2.2rem; height:1rem; border-radius: 15px; position: relative; top: 1rem; right: .2rem";
         removeProject.addEventListener("click", function () {
             clearProject(myProjects, removeProject.dataset.id);
         });
@@ -121,9 +121,9 @@ function displayProjects(myProjects, projectId) {
         if (j == projectId) {
             project.appendChild(newProject);
             project.appendChild(removeProject);
-            newProject.style.cssText = "background-color: yellow; color:black; text-align:center; margin:.5rem 2rem; padding:1rem 2rem 2rem 2rem; width:3.5rem; height:1rem; border-radius: 15px; position: relative; font-size: 1rem;";
+            newProject.style.cssText = "display: flex; background-color: yellow; color:black; margin:.5rem 2rem; text-align:center; justify-text: center; padding: 1rem; width:3.5rem; border-radius: 15px; font-size: .8rem";
         } else {
-            newProject.style.cssText = "background-color: black; color:white; margin:.5rem 2rem; text-align:center; justify-text: center; padding:1rem 2rem 2rem 2rem; width:3.5rem; height:1rem; border-radius: 15px; position: relative; font-size: 15px";
+            newProject.style.cssText = "display: flex; background-color: black; color:white; margin:.5rem 2rem; text-align:center; justify-text: center; padding: 1rem; width:3.5rem; border-radius: 15px; font-size: .8rem";
             project.appendChild(newProject);
             project.appendChild(removeProject);
         }
@@ -145,7 +145,7 @@ function eraseTodo() {
 
 function clearTask(myProjects, a) {
     let clearTask = myProjects[myId].items.splice(a,1);
-    saveTodoToLocalStorage();
+    saveProjectToLocalStorage();
     displayTodo(myProjects[myId].items);
  }
 
