@@ -110,7 +110,7 @@ function displayProjects(myProjects, projectId) {
         let removeProject = document.createElement("removeProject");
         removeProject.dataset.id = j;
         removeProject.innerText = "Remove";
-        removeProject.style.cssText = "background-color: black; color:white; text-align:center; font-size:.7rem; font-weight:bold; padding:15px; width:2.2rem; height:1rem; border-radius: 15px; position: relative; top: 1rem; right: .2rem";
+        removeProject.style.cssText = "background-color: black; color:white; text-align:center; font-size:.7rem; font-weight:bold; padding:15px; width:2.2rem; height:1rem; border-radius: 15px;";
         removeProject.addEventListener("click", function () {
             clearProject(myProjects, removeProject.dataset.id);
         });
